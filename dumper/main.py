@@ -43,7 +43,7 @@ def export(
     if not output_dir.exists():
         output_dir.mkdir(parents=True, exist_ok=True)
 
-    output_file = output_dir / f"{file_name}_{datetime.today().date()}.csv"
+    output_file = output_dir / f"{file_name}.csv"
 
     with engine.connect() as conn:
         write_csv_file(output_file, desg, conn, hour)
